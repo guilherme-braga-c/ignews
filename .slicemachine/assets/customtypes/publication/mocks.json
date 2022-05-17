@@ -1,0 +1,21 @@
+{
+  "id": "0b68151c-e5f5-4c78-a0d7-c71b016a6142",
+  "uid": "rem-hic-quam",
+  "type": "publication",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Enhance synergistic communities",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Adipisicing duis velit est id ullamco ea laborum cillum sit in ut ad nostrud.",
+        "spans": []
+      }
+    ]
+  }
+}
