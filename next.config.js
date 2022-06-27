@@ -5,54 +5,160 @@ const nextConfig = {
 
 module.exports = nextConfig
 
-<header>
-  <!-- Navbar -->
-  <nav
-    class="navbar navbar-expand-lg shadow-md py-2 bg-zinc-900 relative flex items-center w-full justify-between"
-  >
-    <div class="px-6 w-full flex flex-wrap items-center justify-between">
-      <h1 class="text-xl text-zinc-50">R🪐🌎 M</h1>
-      <div
-        class="items-center ml-4 content-end"
-        id="navbarSupportedContentY"
-      >
-        <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
-          <li class="nav-item">
-            <a
-              class="nav-link block pr-2 lg:px-2 py-2 text-zinc-50 hover:text-blue-400 focus:text-blue-400 transition duration-150 ease-in-out"
-              href="#!"
-              data-mdb-ripple="true"
-              data-mdb-ripple-color="light"
-              >Lib</a
-            >
-          </li>
-          <li class="nav-item mb-2 lg:mb-0">
-            <a
-              class="nav-link block pr-2 lg:px-2 py-2 text-zinc-50 hover:text-blue-400 focus:text-blue-400 transition duration-150 ease-in-out"
-              href="#!"
-              data-mdb-ripple="true"
-              data-mdb-ripple-color="light"
-              >Config</a
-            >
-          </li>
-        </ul>
-      </div>
+<header class="headerContainer">
+  <div class="headerContent">
+    <div class="logo">
+      <p>ROOM</p>
     </div>
-  </nav>
-  <!-- Navbar -->
-
-  <!-- Jumbotron -->
-  <div class="text-center bg-neutral-700 text-zinc-50 py-20 px-6">
-    <h1 class="text-5xl font-bold mt-0 mb-6">Continue</h1>
-    <h3 class="text-3xl font-bold mb-8">Subeading</h3>
-    <a
-      class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-      data-mdb-ripple="true"
-      data-mdb-ripple-color="light"
-      href="#!"
-      role="button"
-      >Get started</a
-    >
+    <nav class="navigation">
+      <ul>
+        <li><a href="#">Reading</a></li>
+        <li><a href="#">Completed</a></li>
+        <li><a href="#">Local</a></li>
+        <li><a href="#">Log-in</a></li>
+      </ul>
+    </nav>
   </div>
-  <!-- Jumbotron -->
 </header>
+
+----- styles -- header
+
+
+.headerContainer {
+  height: 5rem;
+
+  .headerContent {
+    max-width: 1120px;
+    height: 5rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: .250px solid var(--matte-black);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    p:first-child {
+
+      font-family: "grotesque-basis";
+      font-size: 2rem;
+      color: var(--title-blue);
+
+      @media (max-width: 720px) {
+        font-size: 1.75rem;
+      }
+    }
+
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    ul {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      display: flex;
+      gap: 1rem;
+      color:  black;
+      li {
+        font-family: "Mabry Pro Medium";
+        font-size: 1rem;
+
+        a:hover {
+          color: var(--title-blue);
+          transition: color 0.3s;
+        }
+      }
+    }
+  }
+}
+
+-- global -- 
+
+@font-face {
+  font-family: 'grotesque-basis';
+  src: local('Basis-Grotesque-Pro'), url(../src/assets/fonts/Basis-Grotesque-Pro-Regular.ttf);
+}
+
+
+@font-face {
+  font-family: 'canela-light';
+  src: local('Canela-Light'), url(../src/assets/fonts/Canela-Light.ttf);
+}
+
+@font-face {
+  font-family: 'canela';
+  src: local('Canela-Regular'), url(../src/assets/fonts/Canela-Regular.ttf);
+}
+
+@import url(//db.onlinewebfonts.com/c/9b06ae83a4412168ed194a8ed31218c2?family=Mabry+Pro+Medium);
+@font-face {font-family: "Mabry Pro Medium"; src: url("//db.onlinewebfonts.com/t/9b06ae83a4412168ed194a8ed31218c2.eot"); src: url("//db.onlinewebfonts.com/t/9b06ae83a4412168ed194a8ed31218c2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9b06ae83a4412168ed194a8ed31218c2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9b06ae83a4412168ed194a8ed31218c2.woff") format("woff"), url("//db.onlinewebfonts.com/t/9b06ae83a4412168ed194a8ed31218c2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9b06ae83a4412168ed194a8ed31218c2.svg#Mabry Pro Medium") format("svg"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --title-blue: #0c00fc;
+  --light-grey: #e8e8e8;
+  --matte-black: #28282b;
+  --yellow-500: #eba417;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: "Mabry Pro Medium";
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+--- app component ---
+  
+  .contentContainer {
+  background-color: var(--light-grey);
+
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: calc(100vh - 5rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+  
+  
+
